@@ -52,6 +52,16 @@
     line-height: 1.9;
 }
 
+/* HERO SECTION BUTTON */
+.hero-button {
+    background: rgb(19, 124, 199);
+    color: white;
+    padding: 8px;
+    border-radius: 1px;
+    width:fit-content;
+    margin: 8px;
+}
+
 /* SCROLL ANIMATIONS */
 
 @keyframes revealTitle {

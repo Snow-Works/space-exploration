@@ -108,10 +108,9 @@
     font-size: 12px;
 }
 
-button:nth-child(1):hover {
-    backdrop-filter: blur(12px);
+.navbar-buttons button:hover {
+    backdrop-filter: blur(13px);
     cursor: pointer;
-    padding: 5.9px;
 }
 
 /* Hover Effect */

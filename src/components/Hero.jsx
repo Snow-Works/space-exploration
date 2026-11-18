@@ -12,6 +12,9 @@ const Hero = () => {
                 <div className="hero-paragraph">
                     <p>Pushing the boundaries of human curiosity through space exploration, advanced technology, and bold discoveries. Join us as we venture into the unknown and redefine what's possible.</p>
                 </div>
+                <div className="hero-button">
+                    <button className="hero-btn">Learn more</button>
+                </div>
             </div>
 
         </div>
