@@ -93,6 +93,27 @@
     transition: color 0.3s ease;
 }
 
+/* Navbar buttons */
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-buttons button {
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+button:nth-child(1):hover {
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    padding: 5.9px;
+}
+
 /* Hover Effect */
 
 .navbar-links a::after {

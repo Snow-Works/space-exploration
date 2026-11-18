@@ -29,6 +29,10 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
+                    <div className="navbar-buttons">
+                        <button className="sign-in">Sign in</button>
+                        <button className="sign-up">Sign up</button>
+                    </div>
 
                 </div>
             </div>
