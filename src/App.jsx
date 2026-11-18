@@ -4,6 +4,7 @@ import "./App.css";
 
 import bgVideo from "./assets/earth-bg.mp4";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero"
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         </video>
 
         <Navbar />
+        <Hero />
 
       </div>
     </div>
