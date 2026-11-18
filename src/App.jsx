@@ -1,15 +1,29 @@
+
 import React from "react";
+import "./App.css";
+
 import bgVideo from "./assets/earth-bg.mp4";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  return <div>
-    <div className="h-[700px] relative">
-      <video autoPlay loop muted className="fixed top-0 left-0 w-full h-[700[px]] object-cover z[-1]">
-        <source src={bgVideo} type="video/mp4" />
-      </video>
-      <Navbar />
+  return (
+    <div className="app-wrapper">
+      <div className="hero-section">
+
+        <video
+          autoPlay
+          loop
+          muted
+          className="hero-background-video"
+        >
+          <source src={bgVideo} type="video/mp4" />
+        </video>
+
+        <Navbar />
+
+      </div>
     </div>
-  </div>
+  );
 };
 
 export default App;
