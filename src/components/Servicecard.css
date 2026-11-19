@@ -1,0 +1,132 @@
+
+.service-section {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #050505;
+}
+
+/* GIF Background */
+.service-background-gif {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+    opacity: 0.65;
+}
+
+/* Dark Overlay */
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.85)
+        );
+}
+
+/* Cards Layout */
+.service-content {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual Cards */
+.cards {
+    min-height: 300px;
+    padding: 35px;
+    display: flex;
+    align-items: flex-end;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/*card photo */
+
+.card-photo {
+  
+}
+
+/* Card Hover */
+.cards:hover {
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Card Content */
+.card-content h1 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.card-content h2 {
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .service-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .service-section {
+        padding: 70px 6%;
+    }
+
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .cards {
+        min-height: 240px;
+        padding: 28px;
+    }
+}
+
+
+

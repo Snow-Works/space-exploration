@@ -5,6 +5,7 @@ import "./App.css";
 import bgVideo from "./assets/earth-bg.mp4";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero"
+import Service from "./components/Servicecard"
 
 const App = () => {
   return (
@@ -22,9 +23,10 @@ const App = () => {
 
         <Navbar />
         <Hero />
-        <Servicecard />
-
+        
       </div>
+      <Service />
+
     </div>
   );
 };
