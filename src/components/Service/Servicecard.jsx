@@ -1,11 +1,10 @@
+
 import React from "react";
 import "./Servicecard.css";
-import bgGif from "../assets/Sci-Fi.gif"
-import rocket from "../assets/rocket.png"
-import network from "../assets/network.png"
-import cloud from "../assets/cloud.png"
-
-
+import bgGif from "../../assets/Sci-Fi.gif";
+import rocket from "../../assets/rocket.png";
+import network from "../../assets/network.png";
+import cloud from "../../assets/cloud.png"
 
 const Service = () => {
     return (

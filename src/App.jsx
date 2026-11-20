@@ -3,9 +3,9 @@ import React from "react";
 import "./App.css";
 
 import bgVideo from "./assets/earth-bg.mp4";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero"
-import Service from "./components/Servicecard"
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero"
+import Service from "./components/Service/Servicecard"
 
 const App = () => {
   return (
