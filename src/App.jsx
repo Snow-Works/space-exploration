@@ -9,6 +9,7 @@ import Service from "./components/Service/Servicecard"
 import About from "./components/About/About";
 import Technology from "./components/Technology/Technology";
 import Galaxy from "./components/Galaxy/Galaxy";
+import Satellite from "./components/Satellite/Satellite";
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
       <Technology />
 
       <Galaxy />
+
+      <Satellite />
 
     </div>
   );
