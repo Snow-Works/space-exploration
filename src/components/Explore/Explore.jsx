@@ -23,7 +23,7 @@ const Explore = () => {
                 </p>
 
                 <a href="mailto:info@mctspace.com" className="explore-button">
-                    LET'S EXPLORE <span>↗</span>
+                    LET'S EXPLORE
                 </a>
 
             </div>

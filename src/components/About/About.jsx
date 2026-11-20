@@ -9,7 +9,7 @@ const About = () => {
                 <img src={spacepic} alt="Astronaut exploring space" />
 
                 <div className="about-image-label">
-                    <span>01 / OUR MISSION</span>
+                    <span>OUR MISSION</span>
                     <span>BEYOUND LIMITS</span>
                 </div>
 

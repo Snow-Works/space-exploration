@@ -4,19 +4,19 @@ import "./Technology.css";
 
 const technologies = [
     {
-        number: "01",
+        number: "TECH",
         title: "Space Engineering",
         description:
             "Exploring the engineering principles behind spacecraft, orbital systems and advanced space infrastructure.",
     },
     {
-        number: "02",
+        number: "SATELLITE",
         title: "Satellite Systems",
         description:
             "Understanding the technologies that connect our planet and expand our ability to observe the universe.",
     },
     {
-        number: "03",
+        number: "SPACE EXPLORE",
         title: "Space Innovation",
         description:
             "Discovering emerging technologies and ideas shaping the next generation of space exploration.",
