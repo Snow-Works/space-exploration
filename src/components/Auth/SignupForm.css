@@ -1,0 +1,44 @@
+
+.signup-form {
+    color: #fff;
+}
+
+.signup-form h2 {
+    font-size: clamp(24px, 5vw, 29px);
+    margin: 12px 0;
+    letter-spacing: -0.8px;
+}
+
+.signup-form .auth-description {
+    color: #929dad;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 18px;
+}
+
+.terms-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 22px 0;
+
+    color: #929dad;
+    font-size: 11px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.terms-label input {
+    accent-color: #55aaff;
+    margin-top: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.signup-form .auth-submit {
+    margin-top: 5px;
+}

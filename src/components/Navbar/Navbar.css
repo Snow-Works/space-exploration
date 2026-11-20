@@ -1,8 +1,3 @@
-
-/* =================================
-   NAVBAR STYLING
-================================= */
-
 .navbar-wrapper {
     position: fixed;
     top: 0;
@@ -11,15 +6,13 @@
     z-index: 1000;
 
     padding: 10px 4%;
-    
+
     background: rgba(5, 10, 20, 0.35);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.016);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-
-/* Navbar Container */
 
 .navbar-container {
     max-width: 1440px;
@@ -27,12 +20,11 @@
     width: 100%;
 }
 
-/* Navbar Content */
-
 .navbar-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
     width: 100%;
 }
 
@@ -47,11 +39,10 @@
     font-size: 24px;
     font-weight: 800;
     letter-spacing: 2px;
+    text-decoration: none;
 
     white-space: nowrap;
 }
-
-/* Logo */
 
 .navbar-logo {
     width: 48px;
@@ -66,8 +57,6 @@
     align-items: center;
 }
 
-/* Navigation Links */
-
 .navbar-links {
     display: flex;
     align-items: center;
@@ -77,8 +66,6 @@
     margin: 0;
     padding: 0;
 }
-
-/* Navigation Anchors */
 
 .navbar-links a {
     position: relative;
@@ -92,28 +79,6 @@
 
     transition: color 0.3s ease;
 }
-
-/* Navbar buttons */
-
-.navbar-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.navbar-buttons button {
-    color: white;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 9px;
-    font-size: 12px;
-}
-
-.navbar-buttons button:hover {
-    backdrop-filter: blur(13px);
-    cursor: pointer;
-}
-
-/* Hover Effect */
 
 .navbar-links a::after {
     content: "";
@@ -138,15 +103,120 @@
     width: 100%;
 }
 
+/* Desktop auth buttons */
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-buttons button {
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+
+    padding: 6px 12px;
+    border: 1px solid #ffffff;
+    border-radius: 9px;
+
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-buttons button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Keyboard focus */
+
+.navbar-links a:focus-visible,
+.navbar-buttons button:focus-visible,
+.hamburger:focus-visible,
+.mobile-auth-buttons button:focus-visible {
+    outline: 2px solid #55aaff;
+    outline-offset: 3px;
+}
+
+/* Hamburger (hidden on desktop) */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 43px;
+    height: 43px;
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.hamburger:hover {
+    border-color: #55aaff;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2px;
+
+    background: #ffffff;
+    border-radius: 5px;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 6px gap + 2px bar height = 8px travel */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile auth buttons (hidden on desktop) */
+
+.mobile-auth-buttons {
+    display: none;
+}
+
 
 /* =================================
-   RESPONSIVE DESIGN
+   NARROW DESKTOP (stop links crowding)
 ================================= */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1100px) {
+    .navbar-links {
+        gap: 28px;
+    }
+}
+
+
+/* =================================
+   TABLET & MOBILE (HAMBURGER MENU)
+================================= */
+
+@media (max-width: 900px) {
 
     .navbar-wrapper {
-        padding: 16px 5%;
+        padding: 14px 5%;
+    }
+
+    .navbar-content {
+        position: relative;
+        justify-content: space-between;
     }
 
     .navbar-brand {
@@ -159,31 +229,172 @@
         height: 38px;
     }
 
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .navbar-buttons {
+        display: none;
+    }
+
+    /* Floating panel */
+
+    .navbar-navigation {
+        position: absolute;
+        top: calc(100% + 18px);
+        right: 0;
+
+        width: min(320px, calc(100vw - 40px));
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 25px;
+
+        background: rgba(5, 12, 24, 0.97);
+        border: 1px solid rgba(85, 170, 255, 0.2);
+        border-radius: 12px;
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-12px);
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease;
+
+        z-index: 1001;
+    }
+
+    .navbar-navigation.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* Links */
+
     .navbar-links {
-        gap: 18px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .navbar-links a {
+        display: block;
+        width: 100%;
+        padding: 17px 5px;
+
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+
+        transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+        color: #55aaff;
+        padding-left: 12px;
+    }
+
+    /* Desktop underline would sit on top of the row dividers */
+    .navbar-links a::after {
+        display: none;
+    }
+
+    /* Auth buttons inside the panel */
+
+    .mobile-auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    .mobile-auth-buttons button {
+        width: 100%;
+        min-height: 44px;
+
+        border-radius: 6px;
+        font-family: inherit;
         font-size: 13px;
+        font-weight: 600;
+
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-sign-in {
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .mobile-sign-in:hover {
+        border-color: #55aaff;
+        color: #55aaff;
+    }
+
+    .mobile-sign-up {
+        background: #55aaff;
+        color: #05070c;
+        border: 1px solid #55aaff;
+    }
+
+    .mobile-sign-up:hover {
+        background: #ffffff;
+        border-color: #ffffff;
     }
 }
 
-@media screen and (max-width: 520px) {
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
 
     .navbar-wrapper {
-        padding: 14px 4%;
+        padding: 12px 6%;
     }
 
-    .navbar-content {
-        flex-direction: column;
-        gap: 18px;
+    .navbar-brand {
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 
-    .navbar-links {
-        gap: 20px;
+    .navbar-logo {
+        width: 34px;
+        height: 34px;
     }
 
-    .navbar-links a {
-        font-size: 12px;
+    .navbar-navigation {
+        width: min(300px, calc(100vw - 32px));
+        padding: 22px;
     }
 }
+
+
+/* =================================
+   REDUCED MOTION
+================================= */
+
