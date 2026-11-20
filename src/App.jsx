@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero"
 import Service from "./components/Service/Servicecard"
 import About from "./components/About/About";
+import Technology from "./components/Technology/Technology";
 
 const App = () => {
   return (
@@ -29,6 +30,8 @@ const App = () => {
       <Service />
 
       <About />
+
+      <Technology />
 
     </div>
   );
