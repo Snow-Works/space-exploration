@@ -10,6 +10,8 @@ import About from "./components/About/About";
 import Technology from "./components/Technology/Technology";
 import Galaxy from "./components/Galaxy/Galaxy";
 import Satellite from "./components/Satellite/Satellite";
+import Explore from "./components/Explore/Explore";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -38,6 +40,10 @@ const App = () => {
       <Galaxy />
 
       <Satellite />
+
+      <Explore />
+
+      <Footer />
 
     </div>
   );
