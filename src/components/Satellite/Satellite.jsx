@@ -1,11 +1,23 @@
 
 import "./Satellite.css";
+import Satelite from "../../assets/satelite.jpg"
+import bgVideo from "../../assets/earth-bg.mp4";
 
 const Satellite = () => {
     return (
+
         <section className="satellite-section" id="satellite">
 
+
             <div className="satellite-content reveal">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    className="hero-background-video"
+                >
+                    <source src={bgVideo} type="video/mp4" />
+                </video>
 
                 <span className="section-tag">
                     ORBITAL EXPLORATION
@@ -49,10 +61,10 @@ const Satellite = () => {
             </div>
 
             <div className="satellite-image reveal">
-                <img
-                    src="/assets/satellite.jpg"
-                    alt="Satellite orbiting planet Earth"
-                />
+
+                <img src={Satelite} alt="Satellite orbiting planet Earth">
+                </img>
+
 
                 <div className="satellite-image-caption">
                     EARTH ORBIT / SATELLITE SYSTEMS

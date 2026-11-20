@@ -1,8 +1,8 @@
 
 .satellite-section {
-    background: #05070c;
+    background: #040c1e50;
     color: #fff;
-    padding: 130px 8%;
+    padding: 130px 55%;
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 80px;
@@ -64,6 +64,7 @@
 
 .satellite-image:hover img {
     transform: scale(1.06);
+    cursor: pointer;
 }
 
 .satellite-image-caption {
