@@ -8,6 +8,7 @@ import Hero from "./components/Hero/Hero"
 import Service from "./components/Service/Servicecard"
 import About from "./components/About/About";
 import Technology from "./components/Technology/Technology";
+import Galaxy from "./components/Galaxy/Galaxy";
 
 const App = () => {
   return (
@@ -32,6 +33,8 @@ const App = () => {
       <About />
 
       <Technology />
+
+      <Galaxy />
 
     </div>
   );
